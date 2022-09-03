@@ -2,8 +2,6 @@
   <h1>#<%= @chatroom.name %></h1>
 
   <div class="messages">
-    <% @chatroom.messages.each do |message| %>
-
-    <% end %>
+    <%= render @chatroom.messages %>
   </div>
 </div>

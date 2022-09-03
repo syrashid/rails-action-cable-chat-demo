@@ -3,5 +3,8 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :chatrooms, only: :show do
     resources :messages, only: :create
+    member do
+      get :turbo_stream
+    end
   end
 end
